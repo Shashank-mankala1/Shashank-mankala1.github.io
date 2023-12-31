@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shashank Mankala</title>
+    <link rel="icon" type="image/png" href="img/mylogo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/712e31168a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    Hi there!
+    <div class="container">
+        <div class="bannercontainer">
+            <div class="leftdiv">
+                <div class="left1">
+                    <div class="profilephoto">
+                        <img src="img/pic.png" alt="" height="100%" style="border-radius: 50%;">
+                    </div>
+                </div>
+                <div class="left2">
+                    <div class="MyName">
+                        <h2>Shashank Mankala</h2>
+                    </div>
+                    <div class="social-container">
+                        <ul class="social-icons">
+                            <li><a href="mailto:shashankmankala.5@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                            <li><a href="https://github.com/Shashank-mankala1"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/shashankmankala/"><i
+                                        class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://medium.com/@shashankmankala"><i class="fab fa-medium"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="b partitiondiv"></div>
+            <div class="rightdiv">
+                <div class="right1">
+                    <h1>Hi There!</h1>
+                </div>
+                <div class="right2">
+                    <video id="myVideo" height="100%" playsinline="" preload="auto"
+                        src="https://awevideo.s3.amazonaws.com/video-23675606-72b9a7229c395bd0a1d6a52d4bfc0ca6.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20231231%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20231231T125303Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8793b505ed4760651d2ac83faa0f5e1e2b1fd4741c9c7111c46b708179a95d12"></video>
+                </div>
+                <div class="right3">
+                    <a href="https://shashank-mankala1.github.io/portfolio/">
+                        <button class="redirectbtn" role="button">
+                            <span class="text">Checkout</span>
+
+                            <div class="icons">
+                                <span class="arrow"></span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
+<script>
+    var video = document.getElementById("myVideo");
+
+    video.addEventListener('mouseover', () => {
+        video.playbackRate = 2;
+        video.play();
+    })
+</script>

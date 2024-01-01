@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Doodle+Shadow&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/712e31168a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -44,7 +45,27 @@
                     <h1>Hi There!</h1>
                 </div>
                 <div class="right2">
-                    <video id="myVideo" height="100%" playsinline="" preload="auto"
+                    <div class="overlay">
+                        <!-- <div class="playbtndiv">
+                            <i class="fas fa-play"></i>
+                        </div> -->
+
+                        <a href='#' class='playBut'>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px"
+                                width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7"
+                                enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+
+                                <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                                73.5,62.5 148.5,105.8 73.5,149.1 " />
+
+                            </svg>
+                        </a>
+
+                    </div>
+                    <video style="border-radius: 5px;" id="myVideo" height="100%" playsinline="" preload="auto"
                         src="https://awevideo.s3.amazonaws.com/video-23675606-72b9a7229c395bd0a1d6a52d4bfc0ca6.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20231231%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20231231T125303Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8793b505ed4760651d2ac83faa0f5e1e2b1fd4741c9c7111c46b708179a95d12"></video>
                 </div>
                 <div class="right3">
@@ -67,9 +88,25 @@
 
 <script>
     var video = document.getElementById("myVideo");
+    var overlay = document.getElementsByClassName('overlay')[0];
+    var videodiv = document.getElementsByClassName('right2')[0];
 
-    video.addEventListener('mouseover', () => {
-        video.playbackRate = 2;
-        video.play();
+    window.onload = function () {
+        video.load();
+    }
+    videodiv.addEventListener('mouseover', () => {
+        setTimeout(() => {
+            video.playbackRate = 2;
+            video.play();
+            overlay.style.display = 'none';
+        }, 1000);
+
     })
+
+    videodiv.addEventListener('mouseout', () => {
+        video.pause();
+        overlay.style.display = 'flex';
+
+    })
+
 </script>

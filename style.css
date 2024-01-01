@@ -5,6 +5,7 @@
 
 body {
     background: url('img/bg.webp') no-repeat center/cover;
+    overflow: hidden;
 }
 
 ::selection {

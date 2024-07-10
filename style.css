@@ -137,20 +137,20 @@ h2 {
     transition: all 0.7s ease-in-out;
     stroke-dasharray: 240;
     stroke-dashoffset: 480;
-    stroke: #000;
+    stroke: #f8aa28;
     transform: translateY(0);
 }
 
 .playBut:hover .triangle {
     stroke-dashoffset: 0;
-    opacity: 1;
-    stroke: #f8aa28;
-    animation: nudge 0.7s ease-in-out;
+    opacity: 0;
+    animation: nudge 0.5s ease-in-out;
 }
 
 @keyframes nudge {
     0% {
         transform: translateX(0);
+        opacity: 1;
     }
 
     30% {
@@ -159,6 +159,7 @@ h2 {
 
     50% {
         transform: translateX(5px);
+        opacity: 0.5;
     }
 
     70% {
@@ -167,13 +168,14 @@ h2 {
 
     100% {
         transform: translateX(0);
+        opacity: 0;
     }
 }
 
-.playBut:hover .circle {
+/* .playBut:hover .circle {
     stroke-dashoffset: 0;
-    opacity: 1;
-}
+    opacity: 0;
+} */
 
 
 

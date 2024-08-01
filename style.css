@@ -53,6 +53,13 @@ body {
     border-top-right-radius: 20px;
 }
 
+.MyName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 h1 {
     font-family: "Bungee Spice", "Rubik Doodle Shadow";
     font-size: 5rem;
@@ -61,6 +68,11 @@ h1 {
 h2 {
     font-family: "Bungee Spice", "Rubik Doodle Shadow";
     font-size: 1.8rem;
+}
+
+h4 {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-size: 1rem;
 }
 
 .left1 {
@@ -76,7 +88,14 @@ h2 {
     border-radius: 50%;
     width: 75%;
     height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#profilepic{
+    height: 100%;
+    width: auto;
 }
 
 .left2 {

@@ -97,13 +97,21 @@
     var portfolioimg = document.getElementById("portfolioimg");
 
     videodiv.addEventListener('mouseover', () => {
-        portfolioimg.src="img/portfolio.gif";
+        portfolioimg.src = "img/portfolio.gif";
 
     })
 
     videodiv.addEventListener('mouseout', () => {
-        portfolioimg.src="img/portfolio.png";
+        portfolioimg.src = "img/portfolio.png";
 
     })
+
+    var fullpage = document.querySelector(".container");
+    window.onload = function checkscreenwidth() {
+        if (screen.width < 360) {
+            fullpage.style.display = "none";
+            setTimeout(() => { alert("Please open this site on another device as your screen size is very small to display"); }, 500);
+        }
+    }
 
 </script>
